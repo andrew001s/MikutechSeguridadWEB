@@ -11,7 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-// Configuración para acceder a la cadena de conexión desde appsettings.json
+// ConfiguraciÃ³n para acceder a la cadena de conexiÃ³n desde appsettings.json
 IConfiguration configuration = builder.Configuration;
 builder.Services.AddSingleton(new DbConnection(configuration));
 
@@ -23,14 +23,6 @@ builder.Services.AddTransient<UsuariosDAO>();
 
 //});
 
-builder.Services.AddAuthorization(options =>
-{
-    options.AddPolicy("AdminOnly", policy =>
-        policy.RequireClaim("id_rol_user", "1"));
-
-    options.AddPolicy("UserOnly", policy =>
-        policy.RequireClaim("id_rol_user", "2"));
-});
 
 
 var app = builder.Build();
