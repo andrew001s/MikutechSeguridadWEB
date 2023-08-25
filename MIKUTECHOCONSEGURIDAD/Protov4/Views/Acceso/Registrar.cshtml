@@ -1,0 +1,80 @@
+﻿@model Protov4.DTO.ClientesDTO;
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/register.css" asp-append-version="true">
+
+    <title>REGISTER</title>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img src="~/recursos/Miku_logo.png" alt="Logo de MIKUTECH">
+            <h1>MIKUTECH</h1>
+        </div>
+    </header>
+    <div class="login-container">
+        <div class="column-left">
+            <img src="~/recursos/img_login.jpg" alt="Imagen de fondo">
+        </div>
+        <div class="column-right">
+            <p style="margin-top: 25px; font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;">Registrar datos:</p>
+            <form asp-controller="Acceso" asp-action="Registrar" method="post" id="registroForm">
+                <div class="container-row">
+                    <div class="container-col-1">
+                        <label>Nombre:</label>
+                        <input asp-for="nombre_cliente" class="form-control bloquear-numeros" required/>
+                        <span asp-validation-for="nombre_cliente" class="text-danger"></span>
+                    </div>
+                    <div class="container-col-2">
+                        <label>Apellido:</label>
+                        <input asp-for="apellido_cliente" class="form-control bloquear-numeros" required/>
+                        <span asp-validation-for="apellido_cliente" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="container-col">
+                    <div>
+                        <label>Teléfono:</label>
+                        <input asp-for="telefono_cliente" id="telefono_cliente" class="form-control" required/>
+                        <span asp-validation-for="telefono_cliente" class="text-danger"></span>
+                        <span id="telefono_error" class="text-danger"></span>
+                    </div>
+                    <div>
+                        <label>Correo:</label>
+                        <input asp-for="correo_nuevo" id="correo_nuevo" required/>
+                        <span asp-validation-for="correo_nuevo" class="text-danger correo-error"></span>
+
+                    </div>
+                    <div>
+                        <label>Contraseña:</label>
+                        <input asp-for="contrasena_nueva" type="password" required/>
+                        <span asp-validation-for="contrasena_nueva" class="text-danger"></span>
+                    </div>
+                    <div>
+                        <label>Confirmar contraseña:</label>
+                        <input asp-for="confirmar_contrasena" name="confirmar_contrasena" type="password" required>
+                        <span asp-validation-for="confirmar_contrasena" class="text-danger"></span>
+                    </div>
+                    <input type="submit" value="Registrar">
+                 </div>
+            </form>
+
+            <p class="register-text">
+                ¿Ya tienes una cuenta?
+                <a class="register-link" href="@Url.Action("Login", "Acceso")">Iniciar Sesión</a>
+            </p>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="~/js/registro-validation.js"></script>
+</body>
+</html>

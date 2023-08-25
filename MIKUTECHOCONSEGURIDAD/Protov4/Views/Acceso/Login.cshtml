@@ -1,0 +1,59 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/login.css" asp-append-version="true">
+    <title>LOGIN</title>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img src="~/recursos/Miku_logo.png" alt="Logo de MIKUTECH">
+            <h1>MIKUTECH</h1>
+        </div>
+    </header>
+    <div class="login-container">
+        <div class="column-left">
+            <img src="~/recursos/img_login.jpg" alt="Imagen de fondo">
+        </div>
+        <div class="column-right">
+            <div class="welcome-container">
+                <h2>Bienvenido a</h2>
+                <h3>MIKUTECH</h3>
+            </div>
+            <p style="margin-top: -15px; font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;">Ingresar</p>
+            <form asp-controller="Acceso" asp-action="Login" method="post">
+                <div class="input-container">
+                    <label for="correo">Correo:</label>
+                    <input type="text" id="correo" name="correo_elec">
+                    <span id="correo-error" style="color: red;"></span>
+                </div>
+                <div class="input-container">
+                    <label for="contrasena">Contraseña:</label>
+                    <input type="password" id="contrasena" name="contrasena">
+                    <input type="submit" value="Ingresar">
+                </div>
+            </form>
+            <p class="register-text">
+                ¿No tienes una cuenta?
+                <a class="register-link" href="@Url.Action("Registrar", "Acceso")">Registrarse</a>
+            </p>
+            @if (ViewBag.Error != null)
+            {
+                <div class="error-alert">
+                    <a>@ViewBag.Error</a>
+                </div>
+            }
+        </div>
+    </div>
+    <script src="~/js/validation.js"></script>
+</body>
+</html>

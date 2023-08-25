@@ -1,0 +1,72 @@
+﻿@font-face {
+    font-family: 'Spoof';
+    src: url('../recursos/SpoofTrial-Bold.otf') format('opentype');
+}
+
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: baseline;
+        height: 100vh;
+        background: linear-gradient(135deg, #0C0A22, #0C0A22);
+    }
+
+    .body-container {
+        padding: 100px;
+        margin-top: -5%;
+    }
+
+    .hearder-container {
+        display: flex;
+        height: 400px;
+    }
+
+    .list-container {
+        margin-top: 25px;
+        padding: 20px;
+        height: 10%;
+        width: 175%;
+    }
+
+    .list-container h2 {
+        font-family: Spoof, Arial;
+        font-size: 30px;
+        color: white;
+    }
+
+    .line-separator {
+        width: 100%;
+        height: 1px;
+        background-color: #ccc;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    .tabla-pedidos {
+        width: 110%;
+        border-collapse: collapse;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+
+    /* Estilos para la cabecera de la tabla (thead) */
+    .tabla-pedidos thead th{
+        font-family: Spoof;
+        background-color: #161A33;
+        color: #12CDD4;
+        border: 3px solid #0C0A22;
+        padding: 10px 0;
+    }
+
+    /* Estilos para el cuerpo de la tabla (td) */
+    .tabla-pedidos tbody th {
+        padding: 5px;
+        text-align: center;
+        border: 3px solid #0C0A22; /* Cambiar el color de las líneas a #474972 */
+        background-color: rgba(71, 73, 114, 0.075);
+        margin: 50px 0;
+        color: white;
+        padding: 10px 0;
+    }

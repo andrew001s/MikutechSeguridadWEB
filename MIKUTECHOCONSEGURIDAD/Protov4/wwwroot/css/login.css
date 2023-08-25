@@ -1,0 +1,146 @@
+@font-face {
+    font-family: 'Spoof';
+    src: url('../recursos/SpoofTrial-Bold.otf') format('opentype');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #411038, #0C0A22);
+}
+
+.login-container {
+    display: flex;
+    width: 800px;
+    height: 420px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.logo h1 {
+    font-family: Spoof, sans-serif;
+    font-size: 36px;
+    margin: 0;
+}
+
+.column-left {
+    width: 350px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+    .column-left img {
+        width: auto;
+        height: 100%;
+        object-fit: cover;
+        margin-left: 150px;
+    }
+
+.column-right {
+    flex: 1;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.welcome-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+    .welcome-container h2 {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 28px;
+        margin-bottom: 0;
+    }
+
+    .welcome-container h3 {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 28px;
+        margin-top: 0;
+        color: #12CDD4;
+    }
+
+.input-container {
+    margin-bottom: 20px;
+}
+
+    .input-container label {
+        font-family: Arial, Helvetica, sans-serif;
+        display: block;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .input-container input {
+        width: 100%;
+        padding: 8px;
+        font-size: 14px;
+    }
+
+.login-container input[type="submit"] {
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    width: 106%;
+    margin-top: 20px;
+    background-color: #414BB2;
+    color: #fff;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 14px;
+}
+
+.register-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-align: right;
+    margin-right: 0px;
+}
+
+.register-link {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-align: right;
+    margin-right: -15px;
+}
+
+    .register-link:hover {
+        color: #12CDD4;
+    }
+
+.navbar {
+    background-color: #161A33;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+    .logo img {
+        height: 50px;
+        margin-left: 30px;
+        margin-right: 25px;
+    }
+
+.error-alert a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #ff0000;
+}

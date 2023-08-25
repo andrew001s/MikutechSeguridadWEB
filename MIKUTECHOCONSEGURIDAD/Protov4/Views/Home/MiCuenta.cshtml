@@ -1,0 +1,49 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/css/myaccount.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <title>MiCuenta</title>
+</head>
+<body>
+    <div class="body-container">
+        <div class="list-container">
+            <h2>MIS PEDIDOS</h2>
+            <div class="line-separator">
+            </div>
+            <table class="tabla-pedidos">
+                <thead>
+                    <tr>
+                        <th>Nº</th>
+                        <th>CIUDAD</th>
+                        <th>FECHA DEL PEDIDO</th>
+                        <th>TIPO DE PAGO</th>
+                        <th>PAGO TOTAL</th>
+                        <th>ESTADO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        int contador = 1;
+                    }
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <th>@contador</th>
+                            <th>@item.ciudad_envio</th>
+                            <th>@item.fecha_pedido</th>
+                            <th>@item.nombre_pago</th>
+                            <th>@item.pago_total</th>
+                            <th>@item.nombre_estado</th>
+                        </tr>
+                        contador++;
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
