@@ -1,0 +1,57 @@
+﻿﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Mikutech</title>
+    <link rel="stylesheet" href="~/css/layout.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+</head>
+<body>
+    <header>
+        <nav class="navbar-custom">
+            <div class="logo">
+                <img src="~/recursos/Miku_logo.png" alt="Logo de MIKUTECH">
+                <h1>MIKUTECH</h1>
+            </div>
+            <div class="botonera">
+                <ul class="navbar-nav-custom">
+                    <li class="nav-item-custom">
+                        <a class="nav-link-custom" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
+                    </li>
+                    <li class="dropdown" style="z-index:100">
+                        <a class="nav-link-custom" asp-area="" asp-controller="Producto" asp-action="Producto">Catálogo</a>
+                        <div class="dropdown-content">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Producto" asp-action="Procesadores">Procesadores</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Producto" asp-action="Graficas">Gráficas</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Producto" asp-action="Graficas">Placas Base</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Producto" asp-action="Ram">Memorias RAM</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Producto" asp-action="Graficas">Almacenamiento</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Producto" asp-action="Graficas">Fuentes de Poder</a>
+                        </div>
+                    </li>
+                    <li class="nav-item-custom">
+                        <a class="nav-link-custom" asp-area="" asp-controller="Home" asp-action="Index">Carrito</a>
+                    </li>
+                    <li class="nav-item-custom">
+                        <a class="nav-link-custom" asp-area="" asp-controller="Home" asp-action="Index">Acerca de</a>
+                    </li>
+                    <li class="nav-item-custom">
+                        <a class="nav-link-custom" asp-area="" asp-controller="Home" asp-action="MiCuenta">Mi cuenta</a>
+                    </li>
+                    <li class="nav-item-custom">
+                        <a class="nav-link-custom-btn" asp-area="" asp-controller="Acceso" asp-action="Logout">Cerrar sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div>
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+</body>
+</html>
